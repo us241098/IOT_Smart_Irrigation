@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+  <table id="customers" class="center">
+    <tr>
+      <th align="center" >Design</th>
+      <th align="center" >Upload</th>
+    </tr>
+    {% for design in designs %}
+    <tr>
+      <td align="center" >{{ design }}</td>
+      <td align="center" ><a href="{{ url_for('transfer', design=design) }}">Upload..</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+
+
+
+{% endblock content %}

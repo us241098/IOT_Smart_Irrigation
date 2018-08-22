@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+  <h1 class="center">Upload new Design</h1>
+  <table id="customers" class="center">
+    <tr>
+      <th align="center" >Sensor-ID</th>
+      <th align="center" >Status</th>
+    </tr>
+    {% for id in ids %}
+    <tr>
+      <td align="center" >{{ id }}</td>
+      <td align="center" >{{ statuses[id] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock content %}
